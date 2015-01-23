@@ -44,13 +44,13 @@ abstract class Est_Handler_Wordpress_AbstractDatabase extends Est_Handler_Abstra
             throw new Exception(sprintf('Could not load xml file "%s"', $localXmlFile));
         }
 
-        $this->_tablePrefix = (string) $config->global->resources->wordpress->connection->table_prefix;
+        $this->_tablePrefix = (string) $config->global->wordpress->connection->table_prefix;
 
         return array(
-            'host'     => (string) $config->global->resources->wordpress->connection->host,
-            'database' => (string) $config->global->resources->wordpress->connection->dbname,
-            'username' => (string) $config->global->resources->wordpress->connection->username,
-            'password' => (string) $config->global->resources->wordpress->connection->password
+            'host'     => (string) $config->global->wordpress->connection->host,
+            'database' => (string) $config->global->wordpress->connection->dbname,
+            'username' => (string) $config->global->wordpress->connection->username,
+            'password' => (string) $config->global->wordpress->connection->password
         );
     }
 
